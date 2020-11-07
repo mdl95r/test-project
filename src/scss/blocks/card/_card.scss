@@ -1,0 +1,73 @@
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (min-width: 569px) {
+        justify-content: space-evenly;
+    }
+}
+
+.card-item {
+    position: relative;
+    width: 270px;
+    margin-bottom: 30px;
+    opacity: 1;
+    &:hover {
+        box-shadow: 0 0 20px 0 #5e5e5e85;
+        opacity: .8;
+        transition: all .1s ease;
+        @include transform-scale(1.01);
+    }
+    &__labels-wrap {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        display: flex;
+    }
+
+    &__desc-wrap {
+        padding: 20px 0 15px 20px;
+        background: #fff;
+    }
+
+    &__labels {
+       padding: 4px 6px;
+       @include brd(4px);
+        &_comfort {
+            color: #000;
+            background-color: #FFCF26;
+        }
+        &_credit {
+            color: #fff;
+            background-color: #11BE75;
+        }
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__img {
+        display: block;
+    }
+
+    &__desc-elems {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__title {
+        font-size: 17px;
+        font-weight: 800;
+    }
+
+    &__metro {
+        padding-left: 20px;
+        background-image: url('../img/icons/Metro.svg');
+        background-repeat: no-repeat;
+        background-position-y: center;
+    }
+    &__addres {
+        color: #777;
+    }
+}

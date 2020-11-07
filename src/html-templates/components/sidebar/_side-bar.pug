@@ -1,0 +1,86 @@
+.widget
+    h3.widget__title Близость к метро
+    .widget__body
+        .widget-location
+            .widget-location__row
+                input.widget-location__checkbox(type="checkbox", data-location-top="true" id="loc-1" checked)
+                label.widget-location__btn(for="loc-1") &lt; 10
+
+                input.widget-location__checkbox(type="checkbox", data-location-top="true" id="loc-2" checked)
+                label.widget-location__btn(for="loc-2") 10-20
+
+                input.widget-location__checkbox(type="checkbox", data-location-top="true" id="loc-3")
+                label.widget-location__btn(for="loc-3") 20-30
+
+                input.widget-location__checkbox(type="checkbox", data-location-top="true" id="loc-4")
+                label.widget-location__btn(for="loc-4") 30+
+            .widget-location__row
+                input.widget-location__checkbox(type="checkbox", id="loc-5")
+                label.widget-location__btn(for="loc-5") Любая
+.widget
+    h3.widget__title Срок сдачи
+    .widget__body
+        .widget-deadline
+            .widget-group
+                label.widget__label Любой
+                    input.widget__input(type="radio" name="deadline")
+                    span.widget-deadline__radio
+            .widget-group
+                label.widget__label Сдан
+                    input.widget__input(type="radio" name="deadline")
+                    span.widget-deadline__radio
+            .widget-group
+                label.widget__label В этом году
+                    input.widget__input(type="radio" name="deadline" checked)
+                    span.widget-deadline__radio
+            .widget-group
+                label.widget__label В следующем год
+                    input.widget__input(type="radio" name="deadline")
+                    span.widget-deadline__radio
+.widget
+    h3.widget__title Дополнительные опции
+    .widget__body
+        .widget-options
+            .widget-group
+                label.widget__label Двор без машин
+                    input.widget__input(type="checkbox" name="options")
+                    span.widget-options__checkbox
+            .widget-group
+                label.widget__label Высокие потолки
+                    input.widget__input(type="checkbox" name="options")
+                    span.widget-options__checkbox
+            .widget-group
+                label.widget__label Панорамные окна
+                    input.widget__input(type="checkbox" name="options" checked)
+                    span.widget-options__checkbox
+            .widget-group
+                label.widget__label Есть кладовые
+                    input.widget__input(type="checkbox" name="options")
+                    span.widget-options__checkbox
+            .widget-group
+                label.widget__label Малоэтажный
+                    input.widget__input(type="checkbox" name="options")
+                    span.widget-options__checkbox
+            .js-hidden-elements.widget__hidden-elements
+                .widget-group
+                    label.widget__label Дополнительный пункт 1
+                        input.widget__input(type="checkbox" name="options")
+                        span.widget-options__checkbox
+                .widget-group
+                    label.widget__label Дополнительный пункт 2
+                        input.widget__input(type="checkbox" name="options")
+                        span.widget-options__checkbox
+                .widget-group
+                    label.widget__label Дополнительный пункт 3
+                        input.widget__input(type="checkbox" name="options")
+                        span.widget-options__checkbox
+        button.widget__more-btn.js-widget-more-btn Показать еще
+.widget
+    .widget-services
+        .widget-group
+            label.widget-services__label-switcher Услуги 0%
+                input.widget__input(type="checkbox")
+                span.widget-services__checkbox
+.buttons-group
+    button.button.button_yellow.js-apply-filters Применить фильтры
+    button.button.button_reset.js-reset-filters Сбросить фильтры

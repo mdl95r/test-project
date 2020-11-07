@@ -1,0 +1,204 @@
+.widget {
+    margin-bottom: 30px;
+    &__title {
+        position: relative;
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        &:after {
+            position: absolute;
+            top: 8px;
+            right: 3px;
+            width: 14px;
+            height: 8px;
+            content: '';
+            background: url("../img/icons/Shape.svg");
+        }
+        &_active {
+            &:after {
+                transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                @include transition(all, .4s, ease);
+            }
+        }
+    }
+
+    &__body {
+        max-height: 400px;
+        overflow-y: hidden;
+        transition: all .3s ease;
+        &_hidden {
+            max-height: 0;
+            transition: all .3s ease;
+        }
+    }
+
+    &__input {
+        position: absolute;
+        width: 1px;
+        height: 1px; 
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        appearance: none;
+    }
+
+    &__label {
+        position: relative;
+        padding-left: 30px;
+        font-size: 16px;
+    }
+    
+    &__more-btn {
+        color: #4290C9;
+        &:hover {
+            text-decoration: underline;
+            opacity: .6;
+            transition: all 2s ease;
+        }
+    }
+
+    &__hidden-elements {
+        max-height: 0;
+        overflow-y: hidden;
+        transition: all .3s ease;
+        &_showed {
+            max-height: 400px;
+            transition: all .3s ease-in;
+        }
+    }
+}
+
+.widget-location {
+    &__row {
+        display: flex;
+        justify-content: center;
+        border: 1px solid #D6D6D6;
+        border-radius: 0px 0px 4px 4px;
+        &:first-child {
+            border-width: 1px 1px 0 1px;
+            border-radius: 4px 4px 0px 0;
+        }
+    }
+    &__btn {
+        flex-grow: 1;
+        width: 67px;
+        height: 50px;
+        font-family: inherit;
+        line-height: 50px;
+        color: #3C3C3C;
+        text-align: center;
+        &:hover {
+            background-color: #ffd02677;
+            @include transition(background-color, 1s, ease-in);
+        }
+        &:first-child {
+            border-radius: 4px 0px 0px 0px;
+        }
+        &:last-child {
+            border-radius: 0 4px 4px 0;
+        }
+        &:not(:last-child) {
+            border-right: 1px solid #d6d6d6;
+        }
+    }
+    &__checkbox {
+        position: absolute;
+        width: 1px;
+        height: 1px; 
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        appearance: none;
+    }
+}
+
+.widget-location__checkbox:checked + .widget-location__btn {
+    background-color: #FFCF26;
+    border: none;
+}
+
+.widget-deadline {
+    &__radio {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/icons/radio.svg');
+    }
+}
+
+.widget-group {
+    margin-bottom: 16px;
+}
+
+.widget-options {
+    &__checkbox {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background-image: url('../img/icons/checkbox.svg');
+    }
+}
+
+.widget__input:checked + .widget-deadline__radio {
+    background-image: url('../img/icons/radio-checked.svg');
+}
+
+.widget__input:checked + .widget-options__checkbox {
+    background-image: url('../img/icons/checkbox-checked.svg');
+}
+
+.widget-services {
+    position: relative;
+    &__checkbox {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        z-index: 0;
+        display: inline-block;
+        width: 37px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        background: #C4C4C4;
+        @include brd(10px);
+        &:after {
+            position: absolute;
+            top: 2px;
+            left: 3px;
+            z-index: 1;
+            width: 15px;
+            height: 15px;
+            content: "";
+            background: #3C3C3C;
+            @include brd(12px);
+            transition: all .2s ease-in;
+        }
+    }
+
+    &__label-switcher {
+        padding-left: 47px;
+    }
+}
+
+
+.widget__input:checked + .widget-services__checkbox {
+    background: #FFE074;
+    &:after {
+        left: 19px;
+        transition: all .2s ease-in;
+    }
+}
+
+.buttons-group {
+    .button:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}

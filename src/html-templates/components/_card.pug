@@ -1,0 +1,98 @@
+-
+    const cards = [
+        {
+            img: 'img/home.jpg',
+            labelComfort: 'Комфорт',
+            labelCredit: 'Рассрочка 12 мес.',
+            homeName: 'ЖК Ильинские луга',
+            deadLine: 'Срок сдачи до 4 кв. 2022 г.',
+            metro: 'Октябрьская',
+            addres: 'пр. Льва Толстого 180А',
+        },
+        {
+            img: 'img/home.jpg',
+            labelComfort: 'Комфорт',
+            labelCredit: 'Рассрочка 12 мес.',
+            homeName: 'ЖК Ильинские луга',
+            deadLine: 'Срок сдачи до 4 кв. 2022 г.',
+            metro: 'Октябрьская',
+            addres: 'пр. Льва Толстого 180А',
+        },
+        {
+            img: 'img/home.jpg',
+            labelComfort: 'Комфорт',
+            labelCredit: 'Рассрочка 12 мес.',
+            homeName: 'ЖК Ильинские луга',
+            deadLine: 'Срок сдачи до 4 кв. 2022 г.',
+            metro: 'Октябрьская',
+            addres: 'пр. Льва Толстого 180А',
+        },
+        {
+            img: 'img/home.jpg',
+            labelComfort: 'Комфорт',
+            labelCredit: 'Рассрочка 12 мес.',
+            homeName: 'ЖК Ильинские луга',
+            deadLine: 'Срок сдачи до 4 кв. 2022 г.',
+            metro: 'Октябрьская',
+            addres: 'пр. Льва Толстого 180А',
+        },
+        {
+            img: 'img/home.jpg',
+            labelComfort: 'Комфорт',
+            labelCredit: 'Рассрочка 12 мес.',
+            homeName: 'ЖК Ильинские луга',
+            deadLine: 'Срок сдачи до 4 кв. 2022 г.',
+            metro: 'Октябрьская',
+            addres: 'пр. Льва Толстого 180А',
+        },
+        {
+            img: 'img/home.jpg',
+            labelComfort: 'Комфорт',
+            labelCredit: 'Рассрочка 12 мес.',
+            homeName: 'ЖК Ильинские луга',
+            deadLine: 'Срок сдачи до 4 кв. 2022 г.',
+            metro: 'Октябрьская',
+            addres: 'пр. Льва Толстого 180А',
+        },
+        {
+            img: 'img/home.jpg',
+            labelComfort: 'Комфорт',
+            labelCredit: 'Рассрочка 12 мес.',
+            homeName: 'ЖК Ильинские луга',
+            deadLine: 'Срок сдачи до 4 кв. 2022 г.',
+            metro: 'Октябрьская',
+            addres: 'пр. Льва Толстого 180А',
+        },
+        {
+            img: 'img/home.jpg',
+            labelComfort: 'Комфорт',
+            labelCredit: 'Рассрочка 12 мес.',
+            homeName: 'ЖК Ильинские луга',
+            deadLine: 'Срок сдачи до 4 кв. 2022 г.',
+            metro: 'Октябрьская',
+            addres: 'пр. Льва Толстого 180А',
+        },
+        {
+            img: 'img/home.jpg',
+            labelComfort: 'Комфорт',
+            labelCredit: 'Рассрочка 12 мес.',
+            homeName: 'ЖК Ильинские луга',
+            deadLine: 'Срок сдачи до 4 кв. 2022 г.',
+            metro: 'Октябрьская',
+            addres: 'пр. Льва Толстого 180А',
+        },
+    ];
+
+ul.cards-list
+    each card in cards
+        li.cards-list_item.card-item
+            a(href="#")
+                .card-item__labels-wrap
+                    .card-item__labels.card-item__labels_comfort #{card.labelComfort}
+                    .card-item__labels.card-item__labels_credit #{card.labelCredit}
+                img.card-item__img(src=`${card.img}` alt=`${card.homeName}`)
+                .card-item__desc-wrap
+                    h2.card-item__title.card-item__desc-elems #{card.homeName}
+                    p.card-item__deadline.card-item__desc-elems #{card.deadLine}
+                    p.card-item__metro.card-item__desc-elems #{card.metro}
+                    p.card-item__addres.card-item__desc-elems #{card.addres}

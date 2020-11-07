@@ -1,0 +1,25 @@
+.more-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: #E5E5E5;
+    @include brd(4px);
+    @media (min-width: 768px + 1) {
+        margin-bottom: 0;
+    }
+    &__icon {
+        width: 24px;
+        &_active {
+            animation: rotate .7s ease;
+            animation-fill-mode: forwards;
+            -webkit-animation: rotate .7s ease;
+        }
+    }
+    &__link {
+        margin-left: 10px;
+        color: #4290C9;
+    }
+}

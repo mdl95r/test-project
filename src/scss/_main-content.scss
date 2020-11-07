@@ -1,0 +1,22 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main-content {
+    order: 2;
+    width: 870px;
+    @media (min-width: 576px) {
+        order: unset;
+    }
+}
+
+.sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+    @media (min-width: 768px + 1) {
+        width: 270px;
+        margin-bottom: 0;
+    }
+}

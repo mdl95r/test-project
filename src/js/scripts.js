@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const hiddenOptions = document.querySelector('.js-hidden-elements');
     const showMoreWidget = document.querySelector('.js-widget-more-btn');
     const btnTitle = document.querySelectorAll('.widget__title');
-    const widgetBody = document.querySelectorAll('.widget__body');
+    const resetFilters = document.querySelector('.js-reset-filters');
+    const applyFilters = document.querySelector('.js-apply-filters');
+    const form = document.querySelector('.form');
 
     moreBtn.addEventListener('click', function (e) {
         e.preventDefault();
@@ -35,7 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     })
 
-    showMoreWidget.addEventListener('click', function () {
+    showMoreWidget.addEventListener('click', function (e) {
+        e.preventDefault();
         hiddenOptions.classList.toggle('widget__hidden-elements_showed');
     })
 
@@ -44,5 +47,14 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.toggle('widget__title_active');
             e.target.nextElementSibling.classList.toggle('widget__body_hidden')
         })
+    });
+
+    resetFilters.addEventListener('click', function (e) {
+        e.preventDefault();
+        form.reset();
+    });
+
+    applyFilters.addEventListener('click', function (e) {
+        e.preventDefault();
     });
 })

@@ -6,7 +6,8 @@
     "start": "gulp",
     "build": "babel dist/js -d src/js --presets es2015",
     "eslint": "eslint ./src",
-    "eslint:fix": "eslint ./src --fix"
+    "eslint:fix": "eslint ./src --fix",
+    "copy": "gulp copyStatic"
   },
   "author": "mdl",
   "license": "ISC",

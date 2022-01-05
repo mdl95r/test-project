@@ -18,11 +18,12 @@
         transition: all .1s ease;
         @include transform-scale(1.01);
     }
-    &__labels-wrap {
+    &__labels {
         position: absolute;
         top: 10px;
         left: 15px;
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__desc-wrap {
@@ -30,8 +31,9 @@
         background: #fff;
     }
 
-    &__labels {
+    &__label {
        padding: 4px 6px;
+       margin-bottom: 5px;
        @include brd(4px);
         &_comfort {
             color: #000;

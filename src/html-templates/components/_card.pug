@@ -87,9 +87,9 @@ ul.cards-list
     each card in cards
         li.cards-list_item.card-item
             a(href="#")
-                .card-item__labels-wrap
-                    .card-item__labels.card-item__labels_comfort #{card.labelComfort}
-                    .card-item__labels.card-item__labels_credit #{card.labelCredit}
+                .card-item__labels
+                    .card-item__label.card-item__label_comfort #{card.labelComfort}
+                    .card-item__label.card-item__label_credit #{card.labelCredit}
                 img.card-item__img(src=`${card.img}` alt=`${card.homeName}`)
                 .card-item__desc-wrap
                     h2.card-item__title.card-item__desc-elems #{card.homeName}
